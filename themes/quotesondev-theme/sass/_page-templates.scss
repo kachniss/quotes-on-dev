@@ -1,7 +1,42 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.site {
+    margin: $base__space-unit/2;
+}
 
+header { 
+    // margin-top: $base__space-unit*2.5;
+    img { 
+        margin-top: $base__space-unit*2;
+        height: 45px;
+    }
+}
+
+article {
+    font-size: 1.3rem;
+
+    .author {
+        &::before {
+            content: "\2014";
+            padding-right: $base__space-unit / 4;
+        }
+    }
+}
+
+
+
+footer {
+    @include desktop {
+        // display: flex;
+        // justify-content: flex-end;
+    }
+
+    .site-info {
+        display: inline;
+    }
+    
+}
 /* All Archives Page */
 
 /* Submit a Quote Page */

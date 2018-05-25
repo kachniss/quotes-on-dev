@@ -6,14 +6,15 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color__green-brand-dark;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -31,6 +32,7 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
+
 
 	ul {
 		display: none;
@@ -79,6 +81,21 @@ a {
 	li {
 		float: left;
 		position: relative;
+		display: inline-block;
+		a {
+			display: inline;
+			padding-right: $base__space-unit / 2;	
+		}
+		
+		&::after {
+			display: inline;
+			content: "\007C";
+			padding-right: $base__space-unit / 2;
+		}
+
+		&:last-of-type::after {
+			content: "";
+		}
 
 		&:hover > a,
 		&.focus > a {
@@ -96,18 +113,12 @@ a {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+	display: none;
 }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+.main-navigation ul {
+	display: block;
 }
 
 .comment-navigation,

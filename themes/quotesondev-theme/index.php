@@ -19,13 +19,13 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php //while ( have_posts() ) : the_post(); ?>
+				<?php the_post(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
-			<?php endwhile; ?>
+			<?php //endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<button class = "ajax-button">Show me another!</button>
 
 		<?php else : ?>
 
