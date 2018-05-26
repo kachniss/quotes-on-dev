@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main home-page" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -24,8 +24,9 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php //endwhile; ?>
-
-			<button class = "ajax-button">Show me another!</button>
+			<div class="button-wrapper">
+				<button class = "ajax-button">Show me another!</button>
+			</div>
 
 		<?php else : ?>
 

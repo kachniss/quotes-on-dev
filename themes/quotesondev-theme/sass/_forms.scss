@@ -8,15 +8,20 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border:  3px solid $color__green-brand;
+	border:  2px solid $color__green-brand;
 	border-radius: 3px;
 	background: transparent;
 	color: $color__green-brand;
 	padding: $base__space-unit/3 $base__space-unit*1.5;
-	margin: $base__space-unit 0;
+	margin-top: $base__space-unit*2;
 	text-transform: capitalize;
 	font-weight: bold;
-	// font-size: .9rem;
+	@include tablet {
+		font-size: 1.2rem;
+	}
+	@include desktop {
+		position: relative;
+	}
 
 	&:hover,
 	&:active,

@@ -33,6 +33,10 @@ a {
 	float: left;
 	width: 100%;
 
+	@include tablet {
+		width: auto;
+	}
+
 
 	ul {
 		display: none;
@@ -95,6 +99,7 @@ a {
 
 		&:last-of-type::after {
 			content: "";
+			padding-right: 0;
 		}
 
 		&:hover > a,

@@ -3,37 +3,123 @@
 --------------------------------------------------------------*/
 .site {
     margin: $base__space-unit/2;
-}
 
-header { 
-    // margin-top: $base__space-unit*2.5;
-    img { 
-        margin-top: $base__space-unit*2;
-        height: 45px;
+    @include tablet {
+        margin: $base__space-unit/1.5;
+    }
+
+    @include desktop {
+        width: $site-with;
+        margin: auto;
+        margin-top: $base__space-unit;
     }
 }
 
-article {
-    font-size: 1.3rem;
+.site-header { 
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
 
-    .author {
-        &::before {
-            content: "\2014";
-            padding-right: $base__space-unit / 4;
+    img { 
+        margin-top: $base__space-unit*2;
+        height: 45px;
+
+        @include tablet {
+            height: 75px;
+        }
+
+        @include desktop {
+            height: 110px;
         }
     }
 }
 
+.site-content {
+    @include desktop {
+        margin: 0 $base__space-unit*8;
+        &::before, &::after {
+            position: absolute;
+            top: 120px;
+            font-size: 25rem;
+            color: $color__green-brand;
+            // font-family: FontAwesome;
+
+        }
+        &::before {
+            left: 200px;
+            content: "\201C";
+        }
+
+        &::after {
+            right: 200px;
+            content: "\201D"; 
+        }
+    }
+
+    .button-wrapper {
+        width: 100%;
+    }
+}
+
+.home-page {
+    @include desktop {
+        text-align: center;
+    }
+
+    article {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    
+        .entry-header {
+            width: 100%;
+    
+            @include tablet {
+                font-size: 1.7rem;
+            }
+    
+            @include desktop {
+                font-size: 2.5rem;
+            }
+        }
+    
+        .entry-content {
+            .author {
+                &::before {
+                    content: "\2014";
+                    padding-right: $base__space-unit / 4;
+                }
+            }
+        }  
+    }
+}
+
+.entry-header {
+    h1 {
+        margin: $base__space-unit*2 0 $base__space-unit 0;
+    }
+}
 
 
 footer {
-    @include desktop {
-        // display: flex;
-        // justify-content: flex-end;
-    }
+    line-height: 2;
+    margin-top: $base__space-unit*3;
 
     .site-info {
         display: inline;
+
+        @include tablet {
+            &::before {
+                display: inline;
+                content: "\007C";
+                padding-right: $base__space-unit/2;
+            }
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: flex-end;
     }
     
 }
