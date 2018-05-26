@@ -63,13 +63,9 @@
 }
 
 .home-page {
-    @include desktop {
-        text-align: center;
-    }
-
     article {
         font-size: 1.3rem;
-        margin-bottom: 0;
+        margin-bottom: $base__space-unit*2;
     
         .entry-header {
             width: 100%;
@@ -91,6 +87,12 @@
                 }
             }
         }  
+    }
+
+    .button-wrapper {
+        @include desktop {
+            text-align: center;
+        }
     }
 }
 

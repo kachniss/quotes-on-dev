@@ -27,7 +27,7 @@ get_header(); ?>
 
 			<?php //endwhile; ?>
 			<div class="button-wrapper">
-				<button class="ajax-button">Show me another!</button>
+				<button id="show-post">Show me another!</button>
 			</div>
 
 		<?php else : ?>

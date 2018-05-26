@@ -1,7 +1,7 @@
 (function($) {
-    $('.ajax-button').on('click', function(event) {
+    $('#show-post').on('click', function(event) {
         event.preventDefault();
-        alert('adf');
+        alert('showing a random post');
     });
 })(jQuery);
 
