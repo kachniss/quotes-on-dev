@@ -20,12 +20,14 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php //while ( have_posts() ) : the_post(); ?>
+			<div class="content-wrapper">
 				<?php the_post(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
+			</div>
 
 			<?php //endwhile; ?>
 			<div class="button-wrapper">
-				<button class = "ajax-button">Show me another!</button>
+				<button class="ajax-button">Show me another!</button>
 			</div>
 
 		<?php else : ?>

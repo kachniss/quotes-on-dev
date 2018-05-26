@@ -125,4 +125,25 @@ footer {
 }
 /* All Archives Page */
 
+.quote-authors, .categories, .tags {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            padding-right: $base__space-unit;
+
+            @include tablet {
+                font-size: 1.2rem;
+            }
+
+            @include tablet {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
 /* Submit a Quote Page */

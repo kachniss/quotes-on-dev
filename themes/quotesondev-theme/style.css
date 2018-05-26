@@ -722,4 +722,18 @@ footer {
               justify-content: flex-end; } }
 
 /* All Archives Page */
+.quote-authors ul, .categories ul, .tags ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .quote-authors ul li, .categories ul li, .tags ul li {
+    display: inline-block;
+    padding-right: 1.5rem; }
+    @media (min-width: 620px) {
+      .quote-authors ul li, .categories ul li, .tags ul li {
+        font-size: 1.2rem; } }
+    @media (min-width: 620px) {
+      .quote-authors ul li, .categories ul li, .tags ul li {
+        font-size: 1.3rem; } }
+
 /* Submit a Quote Page */
