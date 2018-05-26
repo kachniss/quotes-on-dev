@@ -1,0 +1,24 @@
+// Page footer
+
+footer {
+    line-height: 2;
+    margin-top: $base__space-unit*3;
+
+    .site-info {
+        display: inline;
+
+        @include tablet {
+            &::before {
+                display: inline;
+                content: "\007C";
+                padding-right: $base__space-unit/2;
+            }
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}
