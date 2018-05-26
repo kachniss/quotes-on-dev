@@ -33,7 +33,7 @@
 					<input id="url" type="url"/>
 				</p>
 			
-				<button>Submit quote</button>
+				<button id="submit-quote">Submit quote</button>
 			</form>
 		<?php else : ?>
 			<p>Sorry, you must be logged in to submit a quote!</p>

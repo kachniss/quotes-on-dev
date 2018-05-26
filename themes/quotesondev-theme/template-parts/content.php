@@ -8,14 +8,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header" id="quote-text">
 		<?php the_excerpt(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<span class="author"><?php the_title(); ?></span>
+		<span class="author" id="quote-author"><?php the_title(); ?></span>
 		
 		<?php
+			// echo "<pre>";
+			// var_dump(get_post());
+			// echo "</pre>";
 			$source = get_post_meta(get_the_ID(),'_qod_quote_source' );
 			$source_url = get_post_meta(get_the_ID(),'_qod_quote_source_url' );
 			if ($source) {
@@ -23,10 +26,10 @@
 
 				if ($source_url) {
 					$source_url = $source_url[0];
-					echo '<span>, <a href="' . $source_url . '" target="_blank">' . $source . '</a></span>';
+					echo '<span id="quote-source">, <a href="' . $source_url . '" target="_blank">' . $source . '</a></span>';
 				}
 				else {
-					echo '<span>, ' . $source . '</span>';
+					echo '<span id="quote-source">, ' . $source . '</span>';
 				}
 			}
 		?>

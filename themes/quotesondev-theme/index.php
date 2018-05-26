@@ -18,14 +18,24 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php //while ( have_posts() ) : the_post(); ?>
-			<div class="content-wrapper">
-				<?php the_post(); ?>
-				<?php get_template_part( 'template-parts/content' ); ?>
-			</div>
+			<?php
+				$args = array( 
+					'posts_per_page' => 1,
+					'orderby' => 'rand' 
+				); 
+				$post = new WP_Query( $args );
+			?>
+			<?php if ( $post->have_posts() ) : ?>
+				<div class="content-wrapper">
+					<?php $post->the_post(); ?>
+					<?php get_template_part( 'template-parts/content' ); ?>
+				</div>
+				
+				<?php wp_reset_postdata(); ?>
+				<?php else : ?>
+				<h2>Nothing found!</h2>
+			<?php endif; ?>
 
-			<?php //endwhile; ?>
 			<div class="button-wrapper">
 				<button id="show-post">Show me another!</button>
 			</div>

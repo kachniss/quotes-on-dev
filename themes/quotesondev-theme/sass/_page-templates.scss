@@ -28,11 +28,13 @@
         }
         &::before {
             left: 200px;
+            // content: "\f10d";
             content: "\201C";
         }
 
         &::after {
             right: 200px;
+            // content: "\f10e";
             content: "\201D"; 
         }
     }
