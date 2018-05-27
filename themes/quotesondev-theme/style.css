@@ -417,7 +417,6 @@ textarea {
   border: 2px solid #00cc00;
   border-radius: 3px;
   background: transparent;
-  color: #00cc00;
   display: block;
   margin-top: 0.75rem;
   width: 50%; }
@@ -427,7 +426,8 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    outline: 0; }
+    outline: 0;
+    border-color: #ffffff; }
 
 input[type="text"],
 input[type="email"],
@@ -440,6 +440,26 @@ textarea {
   padding-left: 3px;
   width: 100%;
   resize: none; }
+
+.search-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+.search-form .search-field {
+  width: 250px;
+  display: inline-block;
+  margin-right: 0.75rem;
+  padding: 0.375rem; }
+  @media (min-width: 620px) {
+    .search-form .search-field {
+      font-size: 1.2rem; } }
+
+.search-form .search-submit {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -651,7 +671,8 @@ object {
       height: 75px; } }
   @media (min-width: 1080px) {
     .site-header img {
-      height: 110px; } }
+      height: 110px;
+      margin-bottom: 1.5rem; } }
 
 /*--------------------------------------------------------------
 # Page Templates
@@ -667,20 +688,21 @@ object {
       margin: auto;
       margin-top: 1.5rem; } }
 
+.site-content .fa-quote-left, .site-content .fa-quote-right {
+  display: none; }
+
 @media (min-width: 1080px) {
   .site-content {
-    margin: 0 12rem; }
-    .site-content::before, .site-content::after {
-      position: absolute;
-      top: 120px;
-      font-size: 25rem;
-      color: #00cc00; }
-    .site-content::before {
-      left: 200px;
-      content: "\201C"; }
-    .site-content::after {
-      right: 200px;
-      content: "\201D"; } }
+    display: grid;
+    grid-template-columns: 150px 1fr 150px; }
+    .site-content .content-area {
+      margin: 0 3rem; }
+    .site-content .fa-quote-left, .site-content .fa-quote-right {
+      display: inline-block;
+      justify-self: center;
+      margin-top: 2.7rem;
+      font-size: 7rem;
+      color: #00cc00; } }
 
 .site-content .button-wrapper {
   width: 100%; }
@@ -708,7 +730,7 @@ object {
   margin: 3rem 0 1.5rem 0; }
 
 .archives .page-header, .archives article {
-  border-bottom: 1px dashed #ffffff; }
+  border-bottom: 1px dotted #ffffff; }
 
 .archives article {
   padding-bottom: 3rem; }
@@ -730,9 +752,15 @@ object {
       .quote-authors ul li, .categories ul li, .tags ul li {
         font-size: 1.3rem; } }
 
+.search .page-header {
+  border-bottom: 1px dotted #ffffff; }
+
+.search .number-pagination span, .search .number-pagination a {
+  padding-right: 0.75rem; }
+
 footer {
   line-height: 2;
-  margin-top: 4.5rem; }
+  margin: 4.5rem 0; }
   footer .site-info {
     display: inline; }
     @media (min-width: 620px) {

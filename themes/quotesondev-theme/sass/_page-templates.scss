@@ -15,27 +15,26 @@
     }
 }
 
+
+
 .site-content {
+    .fa-quote-left, .fa-quote-right {
+        display: none;
+    }
     @include desktop {
-        margin: 0 $base__space-unit*8;
-        &::before, &::after {
-            position: absolute;
-            top: 120px;
-            font-size: 25rem;
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        // justify-items: center;
+
+        .content-area {
+            margin: 0 $base__space-unit*2;
+        }
+        .fa-quote-left, .fa-quote-right {
+            display: inline-block;
+            justify-self: center;
+            margin-top: $base__space-unit*1.8;
+            font-size: 7rem;
             color: $color__green-brand;
-            // font-family: FontAwesome;
-
-        }
-        &::before {
-            left: 200px;
-            // content: "\f10d";
-            content: "\201C";
-        }
-
-        &::after {
-            right: 200px;
-            // content: "\f10e";
-            content: "\201D"; 
         }
     }
 

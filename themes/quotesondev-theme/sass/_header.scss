@@ -8,6 +8,7 @@
 
     img { 
         margin-top: $base__space-unit*2;
+        
         height: 45px;
 
         @include tablet {
@@ -16,6 +17,7 @@
 
         @include desktop {
             height: 110px;
+            margin-bottom: $base__space-unit;
         }
     }
 }

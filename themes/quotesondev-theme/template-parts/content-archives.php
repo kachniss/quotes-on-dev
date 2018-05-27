@@ -16,8 +16,12 @@
         <div class="quote-authors">
             <h2>Quote Authors</h2>
             <ul>
+                <?php $args = array(
+                        'posts_per_page'   => -1,
+                    );
+                ?>
                 <?php 
-                    $authors = get_posts();
+                    $authors = get_posts($args);
                     foreach($authors as $author) {
                         echo '<li><a href="' . get_the_permalink($author->ID) . '">' . $author->post_title . '</a></li>';
                     }
