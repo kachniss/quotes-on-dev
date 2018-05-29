@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
 
 ?>
@@ -16,9 +16,6 @@
 		<span class="author" id="quote-author"><?php the_title(); ?></span>
 		
 		<?php
-			// echo "<pre>";
-			// var_dump(get_post());
-			// echo "</pre>";
 			$source = get_post_meta(get_the_ID(),'_qod_quote_source' );
 			$source_url = get_post_meta(get_the_ID(),'_qod_quote_source_url' );
 			if ($source) {

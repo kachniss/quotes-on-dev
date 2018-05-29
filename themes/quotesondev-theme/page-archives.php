@@ -2,7 +2,7 @@
 /**
  * The template for displaying archives.
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
 
 get_header(); ?>

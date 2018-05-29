@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
 
 ?><!DOCTYPE html>

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
 
 get_header(); ?>

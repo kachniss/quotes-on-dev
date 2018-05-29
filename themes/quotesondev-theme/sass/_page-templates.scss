@@ -15,8 +15,6 @@
     }
 }
 
-
-
 .site-content {
     .fa-quote-left, .fa-quote-right {
         display: none;
@@ -24,7 +22,6 @@
     @include desktop {
         display: grid;
         grid-template-columns: 150px 1fr 150px;
-        // justify-items: center;
 
         .content-area {
             margin: 0 $base__space-unit*2;
@@ -66,6 +63,10 @@
                     content: "\2014";
                     padding-right: $base__space-unit / 4;
                 }
+            }
+
+            #quote-source {
+                font-style: italic;
             }
         }  
     }

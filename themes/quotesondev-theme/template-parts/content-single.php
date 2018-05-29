@@ -2,7 +2,7 @@
 /**
  * Template part for displaying single posts.
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
 
 ?>

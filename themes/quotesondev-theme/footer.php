@@ -2,11 +2,9 @@
 /**
  * The template for displaying the footer.
  *
- * @package QOD_Starter_Theme
+ * @package QuotesOnDev_Theme
  */
-
 ?>
-
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
