@@ -1,14 +1,17 @@
 (function($) {
+    /**
+     * onclick event for button in archives
+     */
     $('#show-post').on('click', function(event) {
         event.preventDefault();
-        
-        /**
-         * source https://css-tricks.com/using-the-wp-api-to-fetch-posts/ 05/26/2018
-         */
         $.ajax({
             method: 'GET',
+            cache: false,
             url: qod_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
             success: function ( data ) {
+                var url = qod_vars.root_dir + '/' + data[0].slug;
+                history.pushState(null, data[0].title.rendered, url);
+
                 var quote = data[0].content.rendered;
                 var author = data[0].title.rendered;
                 var quote_source = data[0]._qod_quote_source;
@@ -34,6 +37,9 @@
 
     });
 
+    /**
+     * submit quote
+     */
     $('#submit-quote').on('click', function(event) {
         event.preventDefault();
 
@@ -47,7 +53,7 @@
             content: quote,
             _qod_quote_source: source,
             _qod_quote_source_url: url,
-            status: 'publish'
+            status: 'pending'
         };
 
         $.ajax({
@@ -61,7 +67,7 @@
                 alert( 'Your quote has been successfully added!' );
             },
             fail : function() {
-                alert( ' There was an error while adding your quote. ');
+                alert( 'There was an error while adding your quote.');
             }
 
         });

@@ -40,3 +40,13 @@ add_action( 'wp_before_admin_bar_render', 'qod_admin_bar_render' );
 	remove_meta_box( 'trackbacksdiv', 'post', 'normal' );
 }
 add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
+
+/**
+ * five items per category/tag
+ */
+function wpsites_query( $query ) {
+    if ( $query->is_archive() && $query->is_main_query() && !is_admin() ) {
+            $query->set( 'posts_per_page', 5 );
+        }
+    }
+add_action( 'pre_get_posts', 'wpsites_query' );

@@ -1,8 +1,8 @@
 # Project 5 Quotes on Dev
 
-This is a project containing custom wordpress template for a website of Quotes on Dev displaying random quotes about Web Develompent and Programming.
+This is a project containing custom WordPress template for a website Quotes on Dev which displays random quotes about Web Develompent and Programming.
 
-It contains archive of all added quotes - authors, categories and tags. Logged users can add quotes using WP API.
+It contains archive of all added quotes - authors, categories and tags. Logged in users can add quotes using WP API.
 
 Project 5 for RED Academy Web Development course 2018.
 

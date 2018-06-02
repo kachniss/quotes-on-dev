@@ -16,6 +16,10 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
+		<div class="button-wrapper">
+			<button id="show-post">Show me another!</button>
+		</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

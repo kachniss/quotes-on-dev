@@ -15,7 +15,8 @@ function qod_scripts() {
 	wp_localize_script( 'qod_api_js', 'qod_vars', array(
        'rest_url' => esc_url_raw( rest_url() ),
        'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
-       'post_id' => get_the_ID()
+	   'post_id' => get_the_ID(),
+	   'root_dir' => home_url(),
 	) );
 
 	wp_enqueue_script( 'qod_main_js', get_template_directory_uri() . '/build/js/main.min.js', array( 'jquery' ), false, true );

@@ -13,9 +13,9 @@
 	</header><!-- .page-header -->
 
 	<div class="page-content">
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+		<?php if ( is_home() ) : ?>
 
-			<p><?php printf( wp_kses( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php echo esc_html( 'Oops. It looks like there are no quotes to display.') ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
