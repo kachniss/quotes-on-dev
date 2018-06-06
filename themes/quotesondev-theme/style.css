@@ -7,6 +7,7 @@ Description: A WordPress starter theme for the Quotes on Dev project, forked fro
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text domain: quotesondev-theme
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -516,14 +517,14 @@ a {
     display: inline-block; }
     .main-navigation li a {
       display: inline;
-      padding-right: 0.75rem; }
+      margin-right: 0.75rem; }
     .main-navigation li::after {
       display: inline;
       content: "\007C";
-      padding-right: 0.75rem; }
+      margin-right: 0.75rem; }
     .main-navigation li:last-of-type::after {
       content: "";
-      padding-right: 0; }
+      margin-right: 0; }
   .main-navigation a {
     display: block;
     text-decoration: none; }

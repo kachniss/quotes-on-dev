@@ -19,6 +19,7 @@ URL: [Quotes on Dev](https://kachniss.com/quotes-on-dev/)
 * Sass
 * jQuery
 * Ajax
+* History API
 * Wordpress 
     * Wordpress API
 

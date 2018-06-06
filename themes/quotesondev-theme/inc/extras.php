@@ -42,7 +42,8 @@ add_action( 'wp_before_admin_bar_render', 'qod_admin_bar_render' );
 add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
 
 /**
- * five items per category/tag
+ * Five items per category/tag
+ * source https://wordpress.stackexchange.com/questions/155409/increase-number-of-posts-in-archive-page 06/02/2018
  */
 function wpsites_query( $query ) {
     if ( $query->is_archive() && $query->is_main_query() && !is_admin() ) {

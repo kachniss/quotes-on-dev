@@ -31,10 +31,13 @@
                 else {
                     $('#quote-source').html('');
                 }
+
+                $('#show-post').blur();
             },
             cache: false
         });
 
+        
     });
 
     /**
