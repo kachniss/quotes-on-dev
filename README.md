@@ -1,5 +1,7 @@
 # Project 5 Quotes on Dev
 
+![Quotes on Dev Screenshot](https://github.com/kachniss/kachniss-portfolio/blob/master/public/images/screenshots/quotesondev-1.jpg "This is a screenshot of the Inhabitent theme")
+
 This is a project containing custom WordPress template for a website Quotes on Dev which displays random quotes about Web Develompent and Programming.
 
 It contains archive of all added quotes - authors, categories and tags. Logged in users can add quotes using WP API.
@@ -24,4 +26,4 @@ URL: [Quotes on Dev](https://kachniss.com/quotes-on-dev/)
     * Wordpress API
 
 ## License
-This project is licensed under the GPL license.
+This project is licensed under the ISC license.

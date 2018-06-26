@@ -17,8 +17,8 @@
                 var quote_source = data[0]._qod_quote_source;
                 var quote_source_url = data[0]._qod_quote_source_url;
 
-                $( '#quote-author' ).text(author);
-                $( '#quote-text' ).html(quote);
+                $('#quote-author').text(author);
+                $('#quote-text').html(quote);
 
                 if (quote_source) {
                     if (quote_source_url) {
@@ -51,6 +51,11 @@
         var source = $('#source').val();
         var url = $('#url').val();
 
+        if (!author || !quote) {
+            alert( 'Please fill out quote and author.');
+            return;
+        }
+
         var data = {
             title: author,
             content: quote,
@@ -67,12 +72,11 @@
                 xhr.setRequestHeader( 'X-WP-Nonce', qod_vars.wpapi_nonce );
             },
             success : function() {
-                alert( 'Your quote has been successfully added!' );
+                alert('Your quote has been successfully added!');
             },
-            fail : function() {
-                alert( 'There was an error while adding your quote.');
+            error : function() {
+                alert('There was an error while adding your quote.');
             }
-
         });
 
         $('#author').val('');
